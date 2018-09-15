@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 import { AppComponent } from './app.component';
 import { NoteComponent } from './note/note.component';
+import { ToastrService } from './toastr.service';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { NoteComponent } from './note/note.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ToastrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

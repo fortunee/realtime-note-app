@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import * as socketIo from 'socket.io-client';
+import { ToastrService } from '../toastr.service';
 
 @Component({
   selector: 'app-note',
@@ -10,7 +11,7 @@ import * as socketIo from 'socket.io-client';
 export class NoteComponent implements OnInit {
   socket;
   noteList;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private toastr: ToastrService) {
     this.socket = socketIo();
   }
 
