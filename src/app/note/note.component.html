@@ -11,8 +11,8 @@
     <div class="col-sm-3" *ngFor="let note of noteList; let id = index">
       <div class="card">
         <div class="card-body">
-          <div class="card-title">Note {{ id + 1 }}</div>
-          <div class="card-text">{{ note }}</div>
+          <h5 class="card-title">Note {{ id + 1 }}</h5>
+          <p class="card-text">{{ note.content }}</p>
           <a href="#" class="btn btn-danger">Delete</a>
         </div>
       </div>
