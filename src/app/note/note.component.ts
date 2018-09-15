@@ -19,6 +19,7 @@ export class NoteComponent implements OnInit {
     this.getNotes();
     this.socket.on('newNote', () => {
         this.getNotes();
+        this.toastr.Success('Note Added');
       });
   }
 
@@ -32,6 +33,10 @@ export class NoteComponent implements OnInit {
       .subscribe((notes) => {
         this.noteList = notes;
       });
+  }
+
+ deleteNote() {
+    this.toastr.Error('Oops something went wrong');
   }
 
 }
